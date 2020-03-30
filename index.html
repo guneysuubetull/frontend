@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>ReactApp</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--===============================================================================================-->
+  <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="css/util.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <!--===============================================================================================-->
+
+</head>
+
+<body>
+
+<div class="App">
+<link rel="javascript" type="text/html" href="src/app.js">
+</div>
+<div class="limiter">
+  <div class="container-table100">
+    <div class="wrap-table100">
+
+      <div class="table100 ver6 m-b-110" align="center">
+
+        <table id="ver6">
+          <script type="text/javascript">
+            $.get('https://datassist-demo-rest-api.herokuapp.com/employees',function(data){
+              $('#divsite').html(data);
+
+            });
+          </script>
+
+          <script>
+            function myFunction() {
+              var input, filter, table, tr, td, i, txtValue;
+              input = document.getElementById("myInput");
+              filter = input.value.toUpperCase();
+              table = document.getElementById("ver6");
+              tr = table.getElementsByTagName("tr");
+              for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                  txtValue = td.textContent || td.innerText;
+                  if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                  } else {
+                    tr[i].style.display = "none";
+                  }
+                }
+              }
+            }
+          </script>
+          <thead>
+          <tr class="row100 head">
+
+
+            <th class="column100 column1" data-column="column1" ><input type="text"  id="myInput" onkeyup="myFunction()" placeholder="ARAMA" title="Type in a name"></th>
+            <th ><img width="70" height="90" align="center" src="https://vignette.wikia.nocookie.net/marveldatabase/images/f/f1/Amazing_Spider-Man_Vol_3_1_Granov_Variant_Textless.jpg/revision/latest?cb=20140316144029"/></th>
+            <th ><img width="70" height="90"  align="center" src="https://vignette.wikia.nocookie.net/forgottenrealms/images/a/a6/Drizzt-5e.png/revision/latest?cb=20171222032833"/></th>
+            <th ><img width="70" height="90" align="center"  src="https://vignette.wikia.nocookie.net/batman/images/7/72/Detective_Comics_Vol_2-19_Cover-1_Teaser.jpg/revision/latest?cb=20130116215324"/></th>
+            <th ><img width="70" height="90" align="center" src="https://vignette.wikia.nocookie.net/vikingstv/images/e/ed/Lagertha_5x19.jpg/revision/latest/scale-to-width-down/310?cb=20190131044613"/></th>
+
+
+          </tr>
+          </thead>
+          <tbody>
+          <tr class="row100">
+            <td class="column100 column1" data-column="column1"><b>Age</b></td>
+            <td class="column100 column2" data-column="column2">25</td>
+            <td class="column100 column3" data-column="column3">29</td>
+            <td class="column100 column4" data-column="column4">52</td>
+            <td class="column100 column5" data-column="column5">33</td>
+
+
+          </tr>
+
+          <tr class="row100">
+            <td class="column100 column1" data-column="column1"><b>Child Count</b></td>
+            <td class="column100 column2" data-column="column2">0</td>
+            <td class="column100 column3" data-column="column3">0</td>
+            <td class="column100 column4" data-column="column4">2</td>
+            <td class="column100 column5" data-column="column5">2</td>
+
+          </tr>
+
+          <tr class="row100">
+            <td class="column100 column1" data-column="column1"><b>Citizenship</b></td>
+            <td class="column100 column2" data-column="column2">Amerikan</td>
+            <td class="column100 column3" data-column="column3">Menzoberranzanl\u0131</td>
+            <td class="column100 column4" data-column="column4">Gothaml\u0131</td>
+            <td class="column100 column5" data-column="column5">Kattegatl\u0131</td>
+
+          </tr>
+
+          <tr class="row100">
+            <td class="column100 column1" data-column="column1"><b>Employer</b></td>
+            <td class="column100 column2" data-column="column2">Daily Bugle</td>
+            <td class="column100 column3" data-column="column3">Do'Urden House</td>
+            <td class="column100 column4" data-column="column4">Wayne Enterprises</td>
+            <td class="column100 column5" data-column="column5">House of Lothbrok</td>
+
+          </tr>
+
+          <tr class="row100">
+            <td class="column100 column1" data-column="column1"><b>EmploymentStartDate</b></td>
+            <td class="column100 column2" data-column="column2">01-01-2019</td>
+            <td class="column100 column3" data-column="column3">01-01-2010</td>
+            <td class="column100 column4" data-column="column4">01-01-2010</td>
+            <td class="column100 column5" data-column="column5">01-01-2006</td>
+
+          </tr>
+
+          <tr class="row100">
+            <td class="column100 column1" data-column="column1"><b>EmploymentTerminationDate</b></td>
+            <td class="column100 column2" data-column="column2">null</td>
+            <td class="column100 column3" data-column="column3">01-01-2016</td>
+            <td class="column100 column4" data-column="column4">01-01-2018</td>
+            <td class="column100 column5" data-column="column5">null</td>
+
+          </tr>
+
+          <tr class="row100">
+            <td class="column100 column1" data-column="column1"><b>FirstName</b></td>
+            <td class="column100 column2" data-column="column2">Peter</td>
+            <td class="column100 column3" data-column="column3">Drizzt</td>
+            <td class="column100 column4" data-column="column4">Bruce</td>
+            <td class="column100 column5" data-column="column5">Lagertha</td>
+
+          </tr>
+
+          <tr class="row100">
+            <td class="column100 column1" data-column="column1"><b>Gender</b></td>
+            <td class="column100 column2" data-column="column2">Erkek</td>
+            <td class="column100 column3" data-column="column3">Erkek</td>
+            <td class="column100 column4" data-column="column4">Erkek</td>
+            <td class="column100 column5" data-column="column5">Kadın</td>
+
+          </tr>
+          <tr class="row100">
+            <td class="column100 column1" data-column="column1"><b>HireDate</b></td>
+            <td class="column100 column2" data-column="column2">01-01-2019</td>
+            <td class="column100 column3" data-column="column3">01-01-2010</td>
+            <td class="column100 column4" data-column="column4">01-01-2010</td>
+            <td class="column100 column5" data-column="column5">01-01-2006</td>
+
+          </tr>
+          <tr class="row100">
+            <td class="column100 column1" data-column="column1"><b>LastName</b></td>
+            <td class="column100 column2" data-column="column2">Parker</td>
+            <td class="column100 column3" data-column="column3">Do'Urden</td>
+            <td class="column100 column4" data-column="column4">Wayne</td>
+            <td class="column100 column5" data-column="column5">Lothbrok</td>
+
+          </tr>
+          <tr class="row100">
+            <td class="column100 column1" data-column="column1"><b>MaritalStatus</b></td>
+            <td class="column100 column2" data-column="column2">Bekar</td>
+            <td class="column100 column3" data-column="column3">Bekar</td>
+            <td class="column100 column4" data-column="column4">Bekar</td>
+            <td class="column100 column5" data-column="column5">Evli</td>
+
+          </tr>
+          <tr class="row100">
+            <td class="column100 column1" data-column="column1"><b>Profession</b></td>
+            <td class="column100 column2" data-column="column2">Fotograf\u00e7\u0131</td>
+            <td class="column100 column3" data-column="column3">Avc\u0131</td>
+            <td class="column100 column4" data-column="column4">Şirket Sahibi</td>
+            <td class="column100 column5" data-column="column5">\u00c7ift\u00e7i</td>
+
+          </tr>
+          <tr class="row100">
+            <td class="column100 column1" data-column="column1"><b>Retired</b></td>
+            <td class="column100 column2" data-column="column2">False</td>
+            <td class="column100 column3" data-column="column3">False</td>
+            <td class="column100 column4" data-column="column4">True</td>
+            <td class="column100 column5" data-column="column5">False</td>
+
+          </tr>
+          <tr class="row100">
+            <td class="column100 column1" data-column="column1"><b>Salary</b></td>
+            <td class="column100 column2" data-column="column2">2000.0</td>
+            <td class="column100 column3" data-column="column3">1000.0</td>
+            <td class="column100 column4" data-column="column4">200000.0</td>
+            <td class="column100 column5" data-column="column5">1800.0</td>
+
+          </tr>
+          <tr class="row100">
+            <td class="column100 column1" data-column="column1"><b>SalaryCurrency</b></td>
+            <td class="column100 column2" data-column="column2">Dolar</td>
+            <td class="column100 column3" data-column="column3">Dolar</td>
+            <td class="column100 column4" data-column="column4">Dolar</td>
+            <td class="column100 column5" data-column="column5">Dolar</td>
+
+          </tr>
+          <tr class="row100">
+            <td class="column100 column1" data-column="column1"><b>SalaryPeriod</b></td>
+            <td class="column100 column2" data-column="column2">Aylık</td>
+            <td class="column100 column3" data-column="column3">Saatlik</td>
+            <td class="column100 column4" data-column="column4">Günlük</td>
+            <td class="column100 column5" data-column="column5">Aylık</td>
+
+          </tr>
+
+          </tbody>
+
+
+
+        </table>
+        <br>
+        <br>
+        <canvas id="görsel"></canvas>
+        <script>
+          var ctx= document.getElementById('görsel').getContext('2d');
+          var görsel = new Chart(ctx,{
+            type:'pie',
+            data:{
+              labels:['Peter Parker','Dizzt Do Under','Bruce Wayne','Lagertha Lothbrok'],
+              datasets:[{
+                label:'AGE',
+                backgroundColor:'rgb(167,166,255)',
+                borderColor:'rgb(230,255,77)',
+                data:[25,29,52,33]
+
+              }]
+            },
+            options:{}
+
+
+          })
+        </script>
+
+
+      </div>
+
+  </div>
+</div>
+
+
+
+
+<!--===============================================================================================-->
+<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+<script src="vendor/bootstrap/js/popper.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+<script src="js/main.js"></script>
+
+</div>
+
+</body>
+</html>
